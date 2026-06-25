@@ -1,2 +1,40 @@
+# --- Kubernetes / k3s secrets — never commit these ---
+kubeconfig
+*.kubeconfig
+k3s.yaml
+node-token
+*-node-token
+
+# --- Keys & certs ---
+*.key
+*.pem
+*.crt
+*.p12
+
+# --- Plaintext secrets / env files ---
 .env
-.env.local
+.env.*
+*.secret.yaml
+*.secrets.yaml
+
+# If you start using sops or sealed-secrets later, their *encrypted* output
+# is safe to commit — just keep it clearly named, e.g.:
+#   *.sealed.yaml   (sealed-secrets)
+#   *.enc.yaml      (sops)
+# and make sure those patterns above don't accidentally catch them.
+
+# --- Helm ---
+charts/
+*.tgz
+
+# --- Editor / OS junk ---
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# --- Terraform / Ansible, if you add IaC later ---
+*.tfstate
+*.tfstate.*
+.terraform/
+*.retry
