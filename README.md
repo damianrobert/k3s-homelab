@@ -24,13 +24,11 @@ records.
 | k3s-server            | `k3s-server.kbclab.ro`    | `192.168.182.17`               |
 | k3s-worker1           | `k3s-worker1.kbclab.ro`   | `192.168.182.22`               |
  
-> Fill in the real domain/IPs above — left as placeholders since they're
-> specific to this environment.
  
 ## Repo layout
  
 ```
-homelab/
+k3s-homelab/
 ├── README.md              # you are here
 ├── docs/
 │   ├── vm-prep.md          # VM sizing + Debian baseline prep checklist
